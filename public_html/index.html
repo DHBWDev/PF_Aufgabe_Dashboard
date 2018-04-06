@@ -170,10 +170,12 @@ Creative Commons Namensnennung 4.0 International Lizenz.
                         onFailure: (ctx, code, message) => this.onDisconnect({
                                 errorCode: code,
                                 errorMessage: message
-                            })
+                            })             
                     };
-
+                    
                     // TODO: Verbindung herstellen
+                    this.mqttClient.connect(connectOptions);
+                    
                 }
 
                 /**
@@ -181,6 +183,7 @@ Creative Commons Namensnennung 4.0 International Lizenz.
                  */
                 disconnect() {
                     // TODO: Verbindung trennen
+                    
                 }
 
                 /**
