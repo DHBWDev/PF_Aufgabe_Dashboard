@@ -183,13 +183,11 @@ Creative Commons Namensnennung 4.0 International Lizenz.
                  */
                 disconnect() {
                     // TODO: Verbindung trennen
-                    debugger;
                     if(this.mqttClient !== null && this.mqttClient.isConnected()){
                         
                         this.mqttClient.disconnect();
                         
-                    }
-                    
+                    } 
                 }
 
                 /**
@@ -250,12 +248,11 @@ Creative Commons Namensnennung 4.0 International Lizenz.
                     }
                     
                     if (message.type === "CONNECTION_LOST"){
-                        
+
                         this.removeVehicle(message);
                         
                     }
 
-                    
                 }
 
                 /**
